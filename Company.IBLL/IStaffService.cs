@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Company.Model;
 
-namespace Company.DAL
+namespace Company.IBLL
 {
-    public class Class1
+    public partial interface IStaffService : IBaseService<user>
     {
+
     }
 }

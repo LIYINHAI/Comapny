@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Company.IDAL;
+using Company.Model;
 
-namespace Company.DALContainer
+namespace Company.DAL
 {
-    public class Class1
+    public partial class StaffDAL : BaseDAL<user>, IStaffDAL
     {
+
     }
 }

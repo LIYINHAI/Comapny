@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CommpanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -267,6 +268,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Commpany\Commpany.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -278,6 +280,36 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Commpany.BLLContainer\Commpany.BLLContainer.csproj">
+      <Project>{92fad950-5f46-4d22-b28a-1090399ccda2}</Project>
+      <Name>Commpany.BLLContainer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.BLL\Company.BLL.csproj">
+      <Project>{fab247eb-d7c8-4d6d-960c-db10aa5e16aa}</Project>
+      <Name>Company.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.DALContainer\Company.DALContainer.csproj">
+      <Project>{7b2b8ee5-dace-47f3-9434-9289db2ab4ba}</Project>
+      <Name>Company.DALContainer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.DAL\Company.DAL.csproj">
+      <Project>{15e50690-f3a1-43cd-b67d-7ebf90028f80}</Project>
+      <Name>Company.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.IBLL\Company.IBLL.csproj">
+      <Project>{8f75c423-2755-41fc-bf32-d70fd50a7d69}</Project>
+      <Name>Company.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.IDAL\Company.IDAL.csproj">
+      <Project>{dcc1c4cf-c120-4573-b72c-105bf5e20b2f}</Project>
+      <Name>Company.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Model\Company.Model.csproj">
+      <Project>{243026a2-b7fc-485b-afc9-b39bec6acb89}</Project>
+      <Name>Company.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

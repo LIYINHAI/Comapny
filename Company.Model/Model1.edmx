@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CompanyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Staff.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--生成过程中发现错误:
 警告 6002: 表/视图“Company.dbo.user”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
         <EntityType Name="user">
@@ -16,7 +16,7 @@
           <Property Name="Age" Type="int" />
           <Property Name="Sex" Type="char" MaxLength="1" />
         </EntityType>
-        <EntityContainer Name="CompanyModelStoreContainer">
+        <EntityContainer Name="StaffStoreContainer">
           <EntitySet Name="user" EntityType="Self.user" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [user].[ID] AS [ID], 
@@ -30,7 +30,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="CompanyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="Staff" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="user">
           <Key>
             <PropertyRef Name="ID" />
@@ -40,7 +40,7 @@
           <Property Name="Age" Type="Int32" />
           <Property Name="Sex" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="CompanyEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CompanyEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="user" EntityType="Self.user" />
         </EntityContainer>
       </Schema>
@@ -48,9 +48,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CompanyModelStoreContainer" CdmEntityContainer="CompanyEntities">
+        <EntityContainerMapping StorageEntityContainer="StaffStoreContainer" CdmEntityContainer="CompanyEntities1">
           <EntitySetMapping Name="user">
-            <EntityTypeMapping TypeName="CompanyModel.user">
+            <EntityTypeMapping TypeName="Staff.user">
               <MappingFragment StoreEntitySet="user">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />

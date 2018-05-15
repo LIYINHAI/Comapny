@@ -13,10 +13,10 @@ namespace Company.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CompanyEntities : DbContext
+    public partial class CompanyEntities1 : DbContext
     {
-        public CompanyEntities()
-            : base("name=CompanyEntities")
+        public CompanyEntities1()
+            : base("name=CompanyEntities1")
         {
         }
     

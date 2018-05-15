@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Company.IBLL
+using Company.Model;
+namespace Company.IDAL
 {
-    public class Class1
+   public partial  interface IStaffDAL:IBaseDAL<user>
     {
+
     }
 }

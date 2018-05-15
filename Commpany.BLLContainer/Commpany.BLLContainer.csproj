@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,7 +44,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Container.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Company.BLL\Company.BLL.csproj">
+      <Project>{fab247eb-d7c8-4d6d-960c-db10aa5e16aa}</Project>
+      <Name>Company.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.IBLL\Company.IBLL.csproj">
+      <Project>{8f75c423-2755-41fc-bf32-d70fd50a7d69}</Project>
+      <Name>Company.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Company.Model\Company.Model.csproj">
+      <Project>{243026a2-b7fc-485b-afc9-b39bec6acb89}</Project>
+      <Name>Company.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
